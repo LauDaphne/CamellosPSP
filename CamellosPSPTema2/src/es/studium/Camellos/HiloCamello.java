@@ -54,9 +54,11 @@ public class HiloCamello implements Runnable {
 			System.out.println("El camello " + camelloHilo.getNombre() + " ha ganado la carrera.\n");
 			Arrays.sort(Carrera.camellos);
 			System.out.println("El ranking ha quedado del siguiente modo: \n1º Camello " + camelloHilo.getNombre());
+			int numCmll=2;
 			for (int i = 0; i < Carrera.camellos.length; i++) {
 				if (Carrera.camellos[i].getNombre() != camelloHilo.getNombre()) {
-					System.out.println((i + 1) + "º Camello " + Carrera.camellos[i].getNombre() + " a "+ (Carrera.metros - Carrera.camellos[i].getPosicionActual()) + " posiciones.");
+					System.out.println((numCmll) + "º Camello " + Carrera.camellos[i].getNombre() + " a "+ (Carrera.metros - Carrera.camellos[i].getPosicionActual()) + " posiciones.");
+					numCmll++;
 				}
 			}
 		} else if (!HiloCamello.fin) {
